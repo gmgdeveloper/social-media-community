@@ -141,6 +141,7 @@ Route::controller(Profile::class)->middleware('auth', 'verified', 'activity', 'p
 
     Route::post('/profile/update_profile/', 'update_profile')->name('profile.update_profile');
 });
+Route::get('/profile/complete', [Profile::class,'complete_profile']);
 
 //Updater routes are here
 Route::controller(Updater::class)->middleware('auth', 'verified', 'activity')->group(function () {

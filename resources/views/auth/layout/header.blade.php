@@ -44,7 +44,7 @@
                 <div class="col-auto col-lg-6">
                     <div class="logo-branding mt-1">
                         <a class="navbar-brand d-xs-hidden">
-                            <img src="{{ url('storage/logo/light/'.$system_light_logo,) }}" height="35px" class="max-width-250px d-xs-hidden" alt="logo" />
+                            <img src="{{ url('storage/logo/light/'.$system_light_logo,) }}" height="100px" class="max-width-250px d-xs-hidden" alt="logo" />
                         </a>
 
                         <a class="navbar-brand d-block" >
@@ -53,13 +53,16 @@
                     </div>
                 </div>
 
-                <div class="col-auto col-lg-6 ms-auto">
+                <div class="col-auto col-lg-6 ms-auto" style="
+                position: relative;
+                left: 193px;
+                top: 20px;">
                     <div class="login-btns ms-5">
                         <a href="{{ route('login') }}" class="btn @if(Route::currentRouteName() == 'login') active @endif">{{  __('Login') }}</a>
                         @if(get_settings('public_signup') == 1)
                             <a href="{{ route('register') }}" class="btn @if(Route::currentRouteName() == 'register') active @endif">{{ __('Sign up')  }}</a>
                         @endif
-                        <a href="{{ route('guest_user') }}" class="btn @if(Route::currentRouteName() == 'guest_user') active @endif">{{  __('Guest') }}</a>
+                        <a href="{{ route('guest_user') }}" class="btn @if(Route::currentRouteName() == 'guest_user') active @endif" style="margin-left:0px" >{{  __('Guest') }}</a>
                     </div>
                 </div>
             </div>

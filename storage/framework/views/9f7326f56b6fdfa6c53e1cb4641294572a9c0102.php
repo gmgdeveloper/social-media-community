@@ -41,7 +41,7 @@
             </a>
         </li> -->
 
-     <?php if(!Auth()->user()->user_role): ?>
+     <?php if(Auth()->user()->user_role): ?>
         <li class="<?php if(Route::currentRouteName()=='videos' || Route::currentRouteName()=='video.detail.info'|| Route::currentRouteName()=='shorts'|| Route::currentRouteName()=='save.all.view'): ?> active <?php endif; ?>">
             <a href="<?php echo e(route('videos')); ?>">
                 <img src="<?php echo e(url('storage/images/video-2.svg')); ?>" alt="Video and Shorts"><?php echo e(get_phrase('Video and Shorts')); ?>

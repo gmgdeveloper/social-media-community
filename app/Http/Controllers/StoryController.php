@@ -55,6 +55,8 @@ class StoryController extends Controller
             ->whereNotIn('stories.story_id', [$story_id])->orderBy('stories.story_id', 'DESC')->get();
         
         //Stories
+        
+
         $story_details =  DB::table('stories')
         ->select('stories.*', 'users.name', 'users.photo', 'users.friends', 'stories.created_at as created_at')
         ->join('users', 'stories.user_id', '=', 'users.id')

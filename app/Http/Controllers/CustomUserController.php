@@ -43,6 +43,7 @@ class CustomUserController extends Controller
         }
     }
 
+    
 
    public function view_profile_data($id){
     $posts =  Posts::where('user_id', $id)->where('publisher','post')->where('privacy','public')->orderBy('post_id','DESC')->limit('10')->get();

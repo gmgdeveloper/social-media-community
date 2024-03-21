@@ -483,4 +483,10 @@ class Profile extends Controller
         Media_files::create($media_file_data);
     }
 
+
+    public function complete_profile()
+    {
+        return view('frontend.user.steps');
+    }
+
 }

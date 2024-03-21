@@ -44,7 +44,7 @@
                 <div class="col-auto col-lg-6">
                     <div class="logo-branding mt-1">
                         <a class="navbar-brand d-xs-hidden">
-                            <img src="<?php echo e(url('storage/logo/light/'.$system_light_logo,)); ?>" height="35px" class="max-width-250px d-xs-hidden" alt="logo" />
+                            <img src="<?php echo e(url('storage/logo/light/'.$system_light_logo,)); ?>" height="100px" class="max-width-250px d-xs-hidden" alt="logo" />
                         </a>
 
                         <a class="navbar-brand d-block" >
@@ -53,13 +53,16 @@
                     </div>
                 </div>
 
-                <div class="col-auto col-lg-6 ms-auto">
+                <div class="col-auto col-lg-6 ms-auto" style="
+                position: relative;
+                left: 193px;
+                top: 20px;">
                     <div class="login-btns ms-5">
                         <a href="<?php echo e(route('login')); ?>" class="btn <?php if(Route::currentRouteName() == 'login'): ?> active <?php endif; ?>"><?php echo e(__('Login')); ?></a>
                         <?php if(get_settings('public_signup') == 1): ?>
                             <a href="<?php echo e(route('register')); ?>" class="btn <?php if(Route::currentRouteName() == 'register'): ?> active <?php endif; ?>"><?php echo e(__('Sign up')); ?></a>
                         <?php endif; ?>
-                        <a href="<?php echo e(route('guest_user')); ?>" class="btn <?php if(Route::currentRouteName() == 'guest_user'): ?> active <?php endif; ?>"><?php echo e(__('Guest')); ?></a>
+                        <a href="<?php echo e(route('guest_user')); ?>" class="btn <?php if(Route::currentRouteName() == 'guest_user'): ?> active <?php endif; ?>" style="margin-left:0px" ><?php echo e(__('Guest')); ?></a>
                     </div>
                 </div>
             </div>

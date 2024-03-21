@@ -37,7 +37,7 @@
             </a>
         </li> -->
 
-     @if(!Auth()->user()->user_role)
+     @if(Auth()->user()->user_role)
         <li class="@if(Route::currentRouteName()=='videos' || Route::currentRouteName()=='video.detail.info'|| Route::currentRouteName()=='shorts'|| Route::currentRouteName()=='save.all.view') active @endif">
             <a href="{{ route('videos') }}">
                 <img src="{{url('storage/images/video-2.svg')}}" alt="Video and Shorts">{{ get_phrase('Video and Shorts') }}
