@@ -44,7 +44,7 @@
                 <div class="col-auto col-lg-6">
                     <div class="logo-branding mt-1">
                         <a class="navbar-brand d-xs-hidden">
-                            <img src="{{ url('storage/logo/light/'.$system_light_logo,) }}" height="100px" class="max-width-250px d-xs-hidden" alt="logo" />
+                            <img src="{{ url('storage/logo/light/'.$system_light_logo,) }}" height="50px" class="max-width-250px d-xs-hidden" alt="logo" />
                         </a>
 
                         <a class="navbar-brand d-block" >
@@ -56,7 +56,7 @@
                 <div class="col-auto col-lg-6 ms-auto" style="
                 position: relative;
                 left: 193px;
-                top: 20px;">
+                ">
                     <div class="login-btns ms-5">
                         <a href="{{ route('login') }}" class="btn @if(Route::currentRouteName() == 'login') active @endif">{{  __('Login') }}</a>
                         @if(get_settings('public_signup') == 1)

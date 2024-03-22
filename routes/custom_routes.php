@@ -146,7 +146,8 @@ Route::controller(VideoController::class)->middleware('auth', 'verified', 'activ
     Route::get('video/delete', 'video_delete')->name('video.delete');
 });
 
-//  video 
+//  video
+ 
 Route::controller(ChatController::class)->middleware('auth', 'verified', 'activity', 'prevent-back-history')->group(function () {
     Route::get('/chat/inbox/{reciver}/{product?}/', 'chat')->name('chat');
     Route::POST('/chat/save', 'chat_save')->name('chat.save');

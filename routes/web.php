@@ -58,10 +58,10 @@ Route::get('language/switch/{language}', function (Request $request, $language) 
 Route::controller(ModalController::class)->middleware('auth', 'verified', 'activity')->group(function () {
     Route::any('/load_modal_content/{view_path}', 'common_view_function')->name('load_modal_content');
 });
-
+Route::get('/',[MainController::class,'indexPage']);
 //Home controllers group routing
 Route::controller(MainController::class)->group(function () {
-    Route::get('/timeline', 'timeline')->name('timeline1');
+    Route::get('/timeline', 'timeline')->name('timeline');
     Route::post('/create_post', 'create_post')->name('create_post');
     Route::get('/edit_post_form/{id}', 'edit_post_form')->name('edit_post_form');
     Route::post('/edit_post/{id}', 'edit_post')->name('edit_post');
