@@ -2,7 +2,7 @@
 <div class="custom-progress-bar">
     <div class="custom-progress"></div>
 </div>
-<header class="header header-default py-3">
+<header class="header header-default py-3" style="background: #a75af1">
     <nav class="navigation">
         <div class="container">
             <div class="row">

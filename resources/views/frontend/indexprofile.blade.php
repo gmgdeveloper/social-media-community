@@ -73,7 +73,7 @@
                 </div>
                 
                 <div class="col-lg-3 order-2 order-lg-3">
-                    @include('frontend.right_sidebar')
+                    @include('frontend.profileright_sidebar')
                 </div>
             </div> <!-- row end -->
 

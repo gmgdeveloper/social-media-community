@@ -73,7 +73,7 @@
                 </div>
                 
                 <div class="col-lg-3 order-2 order-lg-3">
-                    <?php echo $__env->make('frontend.right_sidebar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                    <?php echo $__env->make('frontend.profileright_sidebar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                 </div>
             </div> <!-- row end -->
 
@@ -166,4 +166,4 @@
 </html>
 
 
-<?php /**PATH D:\laragon\www\social-media-comunity\resources\views/frontend/index.blade.php ENDPATH**/ ?>
+<?php /**PATH D:\laragon\www\social-media-comunity\resources\views/frontend/indexprofile.blade.php ENDPATH**/ ?>

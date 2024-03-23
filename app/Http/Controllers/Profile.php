@@ -46,7 +46,7 @@ class Profile extends Controller
         $page_data['posts'] = $posts;
         $page_data['user'] = $this->user;
         $page_data['view_path'] = 'frontend.profile.index';
-        return view('frontend.index', $page_data);
+        return view('frontend.indexprofile', $page_data);
     }
 
     function load_post_by_scrolling(Request $request)

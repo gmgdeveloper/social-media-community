@@ -46,20 +46,16 @@ class MainController extends Controller
 
     function timeline()
     {
-
-
-      
-            //First 10 stories
-            $stories =  Stories::where(function ($query) {
-                $query->whereJsonContains('users.friends', [$this->user->id])
-                    ->where('stories.privacy', '!=', 'private')
-                    ->orWhere('stories.user_id', $this->user->id);
-            })
-                ->where('stories.status', 'active')
-                ->where('stories.created_at', '>=', (time() - 86400))
-                ->join('users', 'stories.user_id', '=', 'users.id')
-                ->select('stories.*', 'users.name', 'users.photo', 'users.friends', 'stories.created_at as created_at')
-                ->take(5)->orderBy('stories.story_id', 'DESC')->get();
+        $stories =  Stories::where(function ($query) {
+            $query->whereJsonContains('users.friends', [$this->user->id])
+                ->where('stories.privacy', '!=', 'private')
+                ->orWhere('stories.user_id', $this->user->id);
+        })
+            ->where('stories.status', 'active')
+            ->where('stories.created_at', '>=', (time() - 86400))
+            ->join('users', 'stories.user_id', '=', 'users.id')
+            ->select('stories.*', 'users.name', 'users.photo', 'users.friends', 'stories.created_at as created_at')
+            ->take(5)->orderBy('stories.story_id', 'DESC')->get();
 
 
             //First 10 posts
