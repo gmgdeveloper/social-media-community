@@ -9,3 +9,4 @@
 </div>
 
 @include('frontend.main_content.scripts')
+

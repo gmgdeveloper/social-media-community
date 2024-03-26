@@ -27,7 +27,7 @@
                         </a>
                         <div class="sc-search">
                             <form action="{{route('search')}}" method="GET">
-                                <input type="search" class="rounded white-placeholder" name="search" value="@isset($_GET['search']){{$_GET['search']}}@endisset" placeholder="Search">
+                                <input type="search" class="rounded background" name="search" value="@isset($_GET['search']){{$_GET['search']}}@endisset" placeholder="Search">
                             </form>
                         </div>
                     </div>
@@ -75,19 +75,22 @@
                                 </a>
                             </div>
                             <div class="profile-control dropdown">
-                                <button class="dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                {{-- <button class="dropdown-toggle" type="button" id="dropdownMenuButton1"
                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="{{ get_user_image(auth()->user()->photo,'optimized') }}" class="rounded-circle" alt="">
-                                </button>
+                                </button> --}}
+                                 <img src="{{ get_user_image(auth()->user()->photo,'optimized') }}" class="rounded-circle" alt="" class="dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                 data-bs-toggle="dropdown" aria-expanded="false" style="
+                                 width: 50px;
+                                 height: 50px;"> 
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                     <li><a class="dropdown-item" href="{{ route('profile') }}">{{ get_phrase('My Profile') }}</a></li>
                                     @if (auth()->user()->user_role=="admin")
                                         <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">{{ get_phrase('Go to admin panel') }}</a></li>
                                     @endif
 
-                                    @if (auth()->user()->user_role == "general")
+                                    {{-- @if (auth()->user()->user_role == "general")
                                         <li><a class="dropdown-item" href="{{ route('user.dashboard') }}">{{ get_phrase('Dashboard') }}</a></li>
-                                    @endif
+                                    @endif --}}
                                     <li><a class="dropdown-item" href="{{ route('user.password.change') }}">{{ get_phrase('Change Password') }}</a></li>
                                     <li>
                                         <form method="POST" action="{{ route('logout') }}">

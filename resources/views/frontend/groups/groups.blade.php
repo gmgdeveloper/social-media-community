@@ -15,7 +15,8 @@
                         @foreach ($groups as $group)
                             <div class="col-md-3 col-lg-6 col-xl-6 col-sm-4 col-6">
                                 <div class="card p-2 rounded">
-                                    <div class="mb-2 thumbnail-103-103" style="background-image: url('{{ get_group_logo($group->logo,'logo') }}');"></div>
+                                    {{-- <div class="mb-2 thumbnail-103-103" style="background-image: url('{{ get_group_logo($group->logo,'logo') }}');"></div> --}}
+                                    <div class="mb-2 thumbnail-103-103" style="background-image: url('{{ url('storage/groups/logo/optimized/'.$group->logo) }}');"></div>
                                     <a href="{{ route('single.group',$group->id) }}"><h4>{{ ellipsis($group->title,10) }}</h4></a>
                                     @php $joined = \App\Models\Group_member::where('group_id',$group->id)->where('is_accepted','1')->count(); @endphp
                                     <span class="small text-muted">{{ $joined }} {{ get_phrase('Member') }}{{ $joined>1?"s":"" }}</span>

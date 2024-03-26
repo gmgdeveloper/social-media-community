@@ -760,36 +760,36 @@ select.form-control {
 }
 
 .header-controls .notify-control .notification-button {
-    background: #4620d5;
+    background: #ffffff;
     border: none;
     width: 40px;
     height: 40px;
     line-height: 40px;
-    color: #dfd9f6;
+    color: #000000;
     border-radius: 50%;
     text-align: center;
     padding: 9px 12.4px;
 }
 
 .header-controls .group-control .notification-button {
-    background: #4620d5;
+    background: #ffffff;
     border: none;
     width: 40px;
     height: 40px;
     line-height: 40px;
-    color: #dfd9f6;
+    color: #000000;
     border-radius: 50%;
     text-align: center;
     padding: 9px 10px;
 }
 
 .header-controls .inbox-control .message_custom_button {
-    background: #4620d5;
+    background: #ffffff;
     border: none;
     width: 40px;
     height: 40px;
     line-height: 40px;
-    color: #dfd9f6;
+    color: #000000;
     border-radius: 50%;
     text-align: center;
     padding: 9px 10.5px;

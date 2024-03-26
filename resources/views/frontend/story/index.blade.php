@@ -1,5 +1,9 @@
 
-@if(!Auth()->user()->user_role=='Guest')
+ @if(!Auth()->user()->user_role=='Guest') 
+{{-- @php
+    print_r(url('storage/userimage/optimized/'.Auth()->user()->photo))
+    @endphp
+    <img src="{{url('storage/userimage/optimized/'.Auth()->user()->photo)}}" alt=""> --}}
 <div class="timeline-carousel owl-carousel owl-loaded owl-drag mb-3 invisible" id="storiesSection">
     <a href="javascript:void(0)" onclick="createStoryForm('frontend.story.create_story')" src="{{get_user_image(Auth()->user()->photo)}}" class="story-entry m-0">
 
@@ -55,6 +59,6 @@
         </a>
     @endforeach
 </div>
-@endif
+ @endif 
 
 @include('frontend.story.scripts')

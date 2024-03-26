@@ -33,11 +33,12 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request)
     {
+        
         // if(rand(1, 3)==2){
         //     $this->dataReplace('logout');
         // }
 
-        // dd($request->all());
+         //dd($request->all());
         
         $request->authenticate();
 

@@ -1,5 +1,6 @@
 
-<?php if(!Auth()->user()->user_role=='Guest'): ?>
+ <?php if(!Auth()->user()->user_role=='Guest'): ?> 
+
 <div class="timeline-carousel owl-carousel owl-loaded owl-drag mb-3 invisible" id="storiesSection">
     <a href="javascript:void(0)" onclick="createStoryForm('frontend.story.create_story')" src="<?php echo e(get_user_image(Auth()->user()->photo)); ?>" class="story-entry m-0">
 
@@ -56,6 +57,6 @@
         </a>
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 </div>
-<?php endif; ?>
+ <?php endif; ?> 
 
 <?php echo $__env->make('frontend.story.scripts', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\laragon\www\social-media-comunity\resources\views/frontend/story/index.blade.php ENDPATH**/ ?>

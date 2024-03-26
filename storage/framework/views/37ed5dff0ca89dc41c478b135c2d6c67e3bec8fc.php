@@ -10,7 +10,12 @@
                 <div class="avatar avatar-xl"><img class="rounded-circle" src="<?php echo e(get_user_image($user_info->photo, 'optimized')); ?>" alt=""> </div>
                 <div class="genderandinterest">
 
-                    <div class="horizontal-line"></div>
+                    
+                    <img src="<?php echo e(url('storage/thumbnails/gendersign.png')); ?>" width="50" alt="">
+
+                </div>
+                <div>
+                    
                 </div>
                 <div class="avatar-details">
                     <h3><?php echo e(auth()->user()->name); ?></h3>

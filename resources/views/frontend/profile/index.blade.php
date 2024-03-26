@@ -10,7 +10,12 @@
                 <div class="avatar avatar-xl"><img class="rounded-circle" src="{{get_user_image($user_info->photo, 'optimized')}}" alt=""> </div>
                 <div class="genderandinterest">
 
-                    <div class="horizontal-line"></div>
+                    {{-- <div class="horizontal-line"></div> --}}
+                    <img src="{{url('storage/thumbnails/gendersign.png')}}" width="50" alt="">
+
+                </div>
+                <div>
+                    {{-- <img src="{{url('storage/thumbnails/gendersign.png')}}" alt=""> --}}
                 </div>
                 <div class="avatar-details">
                     <h3>{{auth()->user()->name}}</h3>

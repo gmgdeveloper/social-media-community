@@ -59,7 +59,7 @@ class GroupController extends Controller
         }
         
         if ($request->image && !empty($request->image)) {
-            $file_name = FileUploader::upload($request->image, 'public/storage/groups/logo', 300);
+            $file_name = FileUploader::upload($request->image, 'storage/groups/logo', 300);
         }
 
         $group = new Group();
@@ -105,7 +105,7 @@ class GroupController extends Controller
         //previous image name
         $imagename = $group->logo;
         if ($request->image && !empty($request->image)) {
-            $file_name = FileUploader::upload($request->image, 'public/storage/groups/logo', 300);
+            $file_name = FileUploader::upload($request->image, 'storage/groups/logo', 300);
         }
 
         

@@ -27,7 +27,7 @@
                         </a>
                         <div class="sc-search">
                             <form action="<?php echo e(route('search')); ?>" method="GET">
-                                <input type="search" class="rounded white-placeholder" name="search" value="<?php if(isset($_GET['search'])): ?><?php echo e($_GET['search']); ?><?php endif; ?>" placeholder="Search">
+                                <input type="search" class="rounded background" name="search" value="<?php if(isset($_GET['search'])): ?><?php echo e($_GET['search']); ?><?php endif; ?>" placeholder="Search">
                             </form>
                         </div>
                     </div>
@@ -77,19 +77,18 @@
                                 </a>
                             </div>
                             <div class="profile-control dropdown">
-                                <button class="dropdown-toggle" type="button" id="dropdownMenuButton1"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="<?php echo e(get_user_image(auth()->user()->photo,'optimized')); ?>" class="rounded-circle" alt="">
-                                </button>
+                                
+                                 <img src="<?php echo e(get_user_image(auth()->user()->photo,'optimized')); ?>" class="rounded-circle" alt="" class="dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                 data-bs-toggle="dropdown" aria-expanded="false" style="
+                                 width: 50px;
+                                 height: 50px;"> 
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                     <li><a class="dropdown-item" href="<?php echo e(route('profile')); ?>"><?php echo e(get_phrase('My Profile')); ?></a></li>
                                     <?php if(auth()->user()->user_role=="admin"): ?>
                                         <li><a class="dropdown-item" href="<?php echo e(route('admin.dashboard')); ?>"><?php echo e(get_phrase('Go to admin panel')); ?></a></li>
                                     <?php endif; ?>
 
-                                    <?php if(auth()->user()->user_role == "general"): ?>
-                                        <li><a class="dropdown-item" href="<?php echo e(route('user.dashboard')); ?>"><?php echo e(get_phrase('Dashboard')); ?></a></li>
-                                    <?php endif; ?>
+                                    
                                     <li><a class="dropdown-item" href="<?php echo e(route('user.password.change')); ?>"><?php echo e(get_phrase('Change Password')); ?></a></li>
                                     <li>
                                         <form method="POST" action="<?php echo e(route('logout')); ?>">

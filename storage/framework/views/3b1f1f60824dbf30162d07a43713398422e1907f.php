@@ -15,7 +15,8 @@
                         <?php $__currentLoopData = $groups; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $group): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <div class="col-md-3 col-lg-6 col-xl-6 col-sm-4 col-6">
                                 <div class="card p-2 rounded">
-                                    <div class="mb-2 thumbnail-103-103" style="background-image: url('<?php echo e(get_group_logo($group->logo,'logo')); ?>');"></div>
+                                    
+                                    <div class="mb-2 thumbnail-103-103" style="background-image: url('<?php echo e(url('storage/groups/logo/optimized/'.$group->logo)); ?>');"></div>
                                     <a href="<?php echo e(route('single.group',$group->id)); ?>"><h4><?php echo e(ellipsis($group->title,10)); ?></h4></a>
                                     <?php $joined = \App\Models\Group_member::where('group_id',$group->id)->where('is_accepted','1')->count(); ?>
                                     <span class="small text-muted"><?php echo e($joined); ?> <?php echo e(get_phrase('Member')); ?><?php echo e($joined>1?"s":""); ?></span>

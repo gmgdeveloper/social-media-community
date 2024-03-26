@@ -9,4 +9,5 @@
 </div>
 
 <?php echo $__env->make('frontend.main_content.scripts', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+
 <?php /**PATH D:\laragon\www\social-media-comunity\resources\views/frontend/main_content/index.blade.php ENDPATH**/ ?>

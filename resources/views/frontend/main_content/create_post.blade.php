@@ -1,4 +1,4 @@
-{{-- <div class="newsfeed-form single-entry">
+<div class="newsfeed-form single-entry">
     <div class="entry-inner">
         <div class="create-entry">
             @if (isset($page_id)&&!empty($page_id))
@@ -31,14 +31,14 @@
         </div>
         @if(Route::currentRouteName() == 'timeline')
             <div class="post-options justify-content-center">
-                <button class="btn" data-bs-toggle="modal" data-bs-target="#createPost"><img src="{{asset('storage/images/image.svg')}}" alt="photo">{{get_phrase('Photo')}}/{{get_phrase('Video')}}</button>
-                <button class="btn" data-bs-toggle="modal" data-bs-target="#createPost"><img src="{{asset('storage/images/location.png')}}" alt="photo" alt="photo">{{get_phrase('Location')}}</button>
-                <button class="btn" data-bs-toggle="modal" data-bs-target="#createPost"><img src="{{asset('storage/images/camera.svg')}}" alt="photo">{{get_phrase('Live Video')}}</button>
-                <button class="btn" data-bs-toggle="modal" data-bs-target="#createPost"><img src="{{asset('storage/images/plus-circle-fill.svg')}}" alt="photo">{{get_phrase('More')}}</button>
+                <button class="btn" data-bs-toggle="modal" data-bs-target="#createPost"><img src="{{url('storage/images/image.svg')}}" alt="photo">{{get_phrase('Photo')}}/{{get_phrase('Video')}}</button>
+                <button class="btn" data-bs-toggle="modal" data-bs-target="#createPost"><img src="{{url('storage/images/location.png')}}" alt="photo" alt="photo">{{get_phrase('Location')}}</button>
+                <button class="btn" data-bs-toggle="modal" data-bs-target="#createPost"><img src="{{url('storage/images/camera.svg')}}" alt="photo">{{get_phrase('Live Video')}}</button>
+                <button class="btn" data-bs-toggle="modal" data-bs-target="#createPost"><img src="{{url('storage/images/plus-circle-fill.svg')}}" alt="photo">{{get_phrase('More')}}</button>
             </div>
         @endif
     </div>
-</div> --}}
+</div>
 
 {{-- <style>
     .newsfeed-form {
@@ -219,7 +219,7 @@ button {
     </div>
 </div> --}}
 
-<div class="owl-carousel owl-theme">
+{{-- <div class="owl-carousel owl-theme">
     <div class="item">
         <div class="post-img">
             <img src="https://images.unsplash.com/photo-1596265371388-43edbaadab94?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=501" alt="">
@@ -390,6 +390,6 @@ button {
             <!-- Repeat the same structure for other posts -->
         </div>
     </div>
-</div>
+</div> --}}
 
   
