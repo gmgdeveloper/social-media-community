@@ -32,20 +32,21 @@ class MainController extends Controller
 
     private $user;
 
-    function __construct()
-    {
-        $this->middleware(function ($request, $next) {
-            $this->user = Auth()->user();
-            return $next($request);
-        });
+        function __construct()
+        {
+            $this->middleware(function ($request, $next) {
+                $this->user = Auth()->user();
+                return $next($request);
+            });
 
-        header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
-        header("Cache-Control: post-check=0, pre-check=0", false);
-        header("Pragma: no-cache");
-    }
+            header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+            header("Cache-Control: post-check=0, pre-check=0", false);
+            header("Pragma: no-cache");
+        }
 
     function timeline()
     {
+
         $stories =  Stories::where(function ($query) {
             $query->whereJsonContains('users.friends', [$this->user->id])
                 ->where('stories.privacy', '!=', 'private')

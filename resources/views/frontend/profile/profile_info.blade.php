@@ -18,7 +18,7 @@
             @php echo script_checker($user_info->about) @endphp
         </div>
         @if (isset($type)&&$type=="my_account")
-        <button onclick="toggleBio(this, '.edit-bio-form')" class="edit-bio-btn btn btn-primary w-100">{{get_phrase('Edit Bio')}}</button>
+        <button onclick="toggleBio(this, '.edit-bio-form')" class="edit-bio-btn btn btn-primary w-100" style="background:#fff;color:#000;border:1px solid black">{{get_phrase('Edit Bio')}}</button>
         @endif
 
         <form class="ajaxForm d-hidden edit-bio-form" action="{{route('profile.about', ['action_type' => 'update'])}}" method="post">

@@ -20,7 +20,7 @@
                 <div class="avatar-details">
                     <h3>{{auth()->user()->name}}</h3>
                     <button onclick="showCustomModal('{{route('load_modal_content', ['view_path' => 'frontend.profile.edit_profile'])}}', '{{get_phrase('Edit your profile')}}');" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                        data-bs-target="#edit-profile"><i class="fa fa-pencil"></i>{{get_phrase('Edit Profile')}}</button>
+                        data-bs-target="#edit-profile" style="background:#fff;color:#000" ><i class="fa fa-pencil"></i >{{get_phrase('Edit Profile')}}</button>
                 </div>
               
             </div>
@@ -35,6 +35,10 @@
                         <li class="nav-item @if(Route::currentRouteName() == 'profile.friends') active @endif"><a href="{{route('profile.friends')}}" class="nav-link">{{get_phrase('Friends')}}</a></li>
                         <li class="nav-item @if(Route::currentRouteName() == 'profile.photos') active @endif"><a href="{{route('profile.photos')}}" class="nav-link">{{get_phrase('Photo')}}</a></li>
                         <li class="nav-item @if(Route::currentRouteName() == 'profile.videos') active @endif"><a href="{{route('profile.videos')}}" class="nav-link">{{get_phrase('Video')}}</a></li>
+                        {{-- <li class="nav-item @if(Route::currentRouteName() == 'profile.abouts') active @endif"><a href="{{route('profile.abouts')}}" class="nav-link">{{get_phrase('About')}}</a></li>
+                        <li class="nav-item @if(Route::currentRouteName() == 'profile.interest') active @endif"><a href="{{route('profile.interest')}}" class="nav-link">{{get_phrase('Interest')}}</a></li> --}}
+                        <li class="nav-item @if(Route::currentRouteName() == 'profile.abouts') active @endif"><a href="#" class="nav-link">{{get_phrase('About')}}</a></li>
+                        <li class="nav-item @if(Route::currentRouteName() == 'profile.interest') active @endif"><a href="#" class="nav-link">{{get_phrase('Interest')}}</a></li>
                     </ul>
                 </nav>
 

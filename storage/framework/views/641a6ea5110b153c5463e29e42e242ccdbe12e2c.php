@@ -47,43 +47,10 @@
     </div> <!-- Widget End -->
     <div class="widget">
         <div class="d-flex align-items-center justify-content-between">
-            <h3 class="widget-title"><?php echo e(get_phrase('Sponsored')); ?> </h3>
+            <h3 class="widget-title"> <a href="<?php echo e(route('became.official')); ?>" ><?php echo e(get_phrase('Became Official')); ?></a>  </h3>
             
         </div>
-        <div class="sponsors">
-            <?php
-
-                $sponsorPost = \App\Models\Sponsor::orderBy('id','desc')
-
-                ->where(function($query){
-                    $query->where('start_date', '<', date('Y-m-d H:i:s'))
-                    ->orWhere(function($query){
-                        $query->where('start_date', '=', date('Y-m-d H:i:s'))
-                        ->whereTime('start_date', '<=', date('Y-m-d H:i:s'));
-                    });
-                })
-                ->where(function($query){
-                    $query->where('end_date', '>', date('Y-m-d H:i:s'))
-                    ->orWhere(function($query){
-                        $query->where('end_date', '=', date('Y-m-d H:i:s'))
-                        ->whereTime('end_date', '>=', date('Y-m-d H:i:s'));
-                    });
-                })
-                ->where('status', 1)
-                ->limit('5')->get();
-            ?>
-            <?php $__currentLoopData = $sponsorPost; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $sponsor): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <a target="_blank" href="<?php echo e($sponsor->ext_url); ?>">
-                <div class="sponsor d-flex d-md-block d-xl-flex align-items-center border mb-1 text-lg-center text-xl-start">
-                    <img src="<?php echo e(get_sponsor_image($sponsor->image,'thumbnail')); ?>"  class="sponsor_post_image_size ms-2 ms-lg-0 ms-xl-2 mt-2 mt-xl-0" alt="">
-                    <div class="sponsor-txt ms-2 pt-2">
-                        <h6><?php echo e(ellipsis($sponsor->name,30)); ?></h6>
-                        <p class="ellipsis-line-3 pe-2 text-dark"><?php echo e(ellipsis(strip_tags($sponsor->description,100))); ?></p>
-                    </div>
-                </div>
-            </a>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-        </div>
+        
     </div> <!-- Widget End -->
     <div class="widget">
         <div class="d-flex align-items-center justify-content-between">

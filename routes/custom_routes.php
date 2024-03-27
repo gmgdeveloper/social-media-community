@@ -11,6 +11,7 @@ use App\Http\Controllers\ChatController;
 use App\Http\Controllers\FollowController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\OfficialController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\Profile;
 use App\Http\Controllers\Report\SearchController;
@@ -147,6 +148,28 @@ Route::controller(VideoController::class)->middleware('auth', 'verified', 'activ
 });
 
 //  video
+
+
+//official
+
+Route::controller(OfficialController::class)->middleware('auth', 'verified', 'activity', 'prevent-back-history')->group(function () {
+    Route::get('/became-official', 'index')->name('became.official');
+    // Route::POST('/videos/sorts/store', 'store')->name('videos.store');
+    // Route::get('/video/details/info/{id}', 'videoinfo')->name('video.detail.info');
+    // Route::get('/shorts', 'shorts')->name('shorts');
+    // Route::get('save/video/short/{id}', 'save_for_later')->name('save.video.later');
+    // Route::get('/load_videos_by_scrolling', 'load_videos_by_scrolling')->name('load_videos_by_scrolling');
+    // Route::get('/load_shorts_by_scrolling', 'load_shorts_by_scrolling')->name('load_shorts_by_scrolling');
+
+    // Route::get('save/video/short/{id}', 'save_for_later')->name('save.video.later');
+    // Route::get('unsave/video/short/{id}', 'unsave_for_later')->name('unsave.video.later');
+
+    // Route::get('saved/video/view', 'save_all')->name('save.all.view');
+
+    // Route::get('video/delete', 'video_delete')->name('video.delete');
+});
+
+//end official
  
 Route::controller(ChatController::class)->middleware('auth', 'verified', 'activity', 'prevent-back-history')->group(function () {
     Route::get('/chat/inbox/{reciver}/{product?}/', 'chat')->name('chat');

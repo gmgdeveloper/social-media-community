@@ -18,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 
     Route::get('login', [AuthenticatedSessionController::class, 'create'])
                 ->name('login_get');
+
+    Route::get('/', [AuthenticatedSessionController::class, 'index']);
+    
     Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login');
 
     Route::get('forgot-password', [PasswordResetLinkController::class, 'create'])

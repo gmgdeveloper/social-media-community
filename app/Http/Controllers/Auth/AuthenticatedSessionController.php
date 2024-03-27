@@ -18,9 +18,15 @@ class AuthenticatedSessionController extends Controller
      *
      * @return \Illuminate\View\View
      */
+
+     public function index()
+     {
+        dd('hello');
+     }
     public function create()
     {
-        //return view('frontend.index');
+        // dd('hello');
+        // return view('frontend.index');
 
          return view('auth.login');
     }

@@ -310,3 +310,99 @@ body{
 }
 
 
+/* package cards */
+
+
+/* .package-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.package-title {
+    font-size: 24px;
+    color: #333;
+}
+
+.package-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.package-price {
+    font-size: 20px;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+} */
+
+
+
+/* packages cards in on row  */
+.package-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.package-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.package-title {
+    font-size: 24px;
+    color: #333;
+}
+
+.package-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.package-price {
+    font-size: 20px;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: #fff;
+    color: #000000;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #a75af1;
+    color: #fff;
+}

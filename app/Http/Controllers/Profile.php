@@ -489,4 +489,15 @@ class Profile extends Controller
         return view('frontend.user.steps');
     }
 
+    public function abouts()
+    {
+        dd('hello');
+    }
+
+    public function interest()
+    {
+        dd('hello');
+    }
+
+
 }

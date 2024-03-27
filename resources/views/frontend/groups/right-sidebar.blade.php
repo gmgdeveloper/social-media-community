@@ -3,12 +3,12 @@
 <div class="col-lg-5">
 
         <aside class="sidebar plain-sidebar">
-        @if(!Auth::user()->user_role=='Guest')
+        {{-- @if(!Auth::user()->user_role=='Guest') --}}
            <div class="widget">
                     <button class="btn btn-primary d-block w-100" onclick="showCustomModal('{{route('load_modal_content', ['view_path' => 'frontend.groups.create'])}}', '{{get_phrase(' Create New Community')}}');" data-bs-toggle="modal"
                         data-bs-target="#newGroup"><i class="fa fa-plus-circle"></i>{{get_phrase(' Create New Community')}}</button>
             </div>
-        @endif
+        {{-- @endif --}}
          
             <div class="widget">
                 <div class="gr-search">

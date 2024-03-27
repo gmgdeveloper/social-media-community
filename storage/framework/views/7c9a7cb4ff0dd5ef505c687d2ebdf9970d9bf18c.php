@@ -21,5 +21,5 @@
         <span><?php echo e(get_phrase('Joined')); ?> <strong><?php echo e(date_formatter($user_info->created_at, 1)); ?></strong></span>
     </li>
 </ul>
-<button onclick="showCustomModal('<?php echo route('profile.my_info', ['action_type' => 'edit']); ?>', '<?php echo e(get_phrase('Edit info')); ?>')" class="btn btn-primary w-100 mt-3"><?php echo e(get_phrase('Edit Info')); ?></button>
+<button onclick="showCustomModal('<?php echo route('profile.my_info', ['action_type' => 'edit']); ?>', '<?php echo e(get_phrase('Edit info')); ?>')" class="btn btn-primary w-100 mt-3" style="background:#fff;color:#000;border:1px solid black" ><?php echo e(get_phrase('Edit Info')); ?></button>
 <?php /**PATH D:\laragon\www\social-media-comunity\resources\views/frontend/profile/my_info.blade.php ENDPATH**/ ?>

@@ -51,5 +51,10 @@
 
 
 
+
+
+
+
+
   
 <?php /**PATH D:\laragon\www\social-media-comunity\resources\views/frontend/main_content/create_post.blade.php ENDPATH**/ ?>

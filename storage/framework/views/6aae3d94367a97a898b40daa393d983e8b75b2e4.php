@@ -3,12 +3,12 @@
 <div class="col-lg-5">
 
         <aside class="sidebar plain-sidebar">
-        <?php if(!Auth::user()->user_role=='Guest'): ?>
+        
            <div class="widget">
                     <button class="btn btn-primary d-block w-100" onclick="showCustomModal('<?php echo e(route('load_modal_content', ['view_path' => 'frontend.groups.create'])); ?>', '<?php echo e(get_phrase(' Create New Community')); ?>');" data-bs-toggle="modal"
                         data-bs-target="#newGroup"><i class="fa fa-plus-circle"></i><?php echo e(get_phrase(' Create New Community')); ?></button>
             </div>
-        <?php endif; ?>
+        
          
             <div class="widget">
                 <div class="gr-search">

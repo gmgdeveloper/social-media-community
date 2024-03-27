@@ -42,6 +42,8 @@ Route::get('/users/{user_id}', function ($user_id) {
     return view('welcome');
 });
 
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -125,6 +127,8 @@ Route::controller(Profile::class)->middleware('auth', 'verified', 'activity', 'p
     Route::get('/profile/load_albums', 'load_albums')->name('profile.load_albums');
 
     Route::get('/profile/videos', 'videos')->name('profile.videos');
+    Route::get('/profile/abouts', 'abouts')->name('profile.abouts');
+    Route::get('/profile/interest', 'interest')->name('profile.interest');
     Route::get('/profile/load_videos', 'load_videos')->name('profile.load_videos');
 
     Route::get('/profile/load_my_friends', 'load_my_friends')->name('profile.load_my_friends');

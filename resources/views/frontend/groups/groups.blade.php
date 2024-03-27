@@ -35,8 +35,9 @@
                         @endforeach
                     </div>
                 </div>
-                @if (count($groups)>15)
-                    <a href="{{ route('all.group.view') }}" class="btn btn-secondary btn-lg d-block mt-3">{{ get_phrase('See More') }}</a>
+                @if (count($groups)>1)
+                    {{-- <a href="{{ route('all.group.view') }}" class="btn btn-secondary btn-lg d-block mt-3">{{ get_phrase('See More') }}</a> --}}
+                    <a href="#" class="btn btn-secondary btn-lg d-block mt-3">{{ get_phrase('See More') }}</a>
                 @endif
             </div>
         </div>

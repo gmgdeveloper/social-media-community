@@ -23,27 +23,27 @@
            
             <div class="modal-content">
                 <div class="modal-header text-center">
-                    @if(!Auth()->user()->user_role=="Guest")
+                    {{-- @if(Auth()->user()->user_role=="Guest") --}}
                     <h5 class="modal-title" id="exampleModalLabel">{{get_phrase('Create Post ')}}</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                         aria-label="Close"><i class="fa fa-close"></i></button>
 
-                        @else
+                        {{-- @else
                          <h5 class="modal-title" id="exampleModalLabel">{{get_phrase('Please Register Or Login First ')}}</h5>
                          <h5 class="modal-title text-primary" id="exampleModalLabel">
                                 <a href="{{ route('login') }}" class="text-primary">Login</a>
-                            </h5>
+                            </h5> --}}
 
                     
                     
                          <button type="button" class="btn-close" data-bs-dismiss="modal"
                         aria-label="Close"><i class="fa fa-close"></i></button>
-                    @endif
+                    {{-- @endif --}}
 
                     
                    
                 </div>
-                    @if(!Auth()->user()->user_role=='Guest')
+                    {{-- @if(Auth()->user()->user_role=='Guest') --}}
                             <div class="modal-body">
                                 <div class="entry-header d-flex justify-content-between">
                                     @if (isset($page_id)&&!empty($page_id))
@@ -77,13 +77,40 @@
                                 </div>
 
 
-                                <textarea name="description" id="post_article" placeholder="{{  get_phrase("What's on your mind ____", [auth()->user()->name]) }}?"></textarea>
+                                {{-- <textarea name="description" id="post_article" placeholder="{{  get_phrase("What's on your mind ____", [auth()->user()->name]) }}?"></textarea> --}}
+                                <div class="form-group pt-2">
+                                    <label for="#">{{ get_phrase('Title') }}</label>
+                                    <input type="text" class="border-0"  name="name" value="" required placeholder="Enter Post Title">
+                                </div>
+                                <div class="form-group">
+                                    <label for="#">{{ get_phrase('Description') }}</label>
+                                    <textarea name="about" class="border-0 bg-secondary content" id="about" cols="30" rows="10" placeholder="About Community"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="#">{{ get_phrase('Image') }}</label>
+                                    <input type="file" name="image" id="image" class="form-control border-0 ">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="#">{{ get_phrase('Video') }}</label>
+                                    <input type="file" name="video" id="video" class="form-control border-0">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="#">{{ get_phrase('Hashtags') }}</label>
+                                    <select name="hashtags" id="hashtags" class="form-control">
+                                        <option value="">{{ get_phrase('Hashtag1') }}</option>
+                                        <option value="">{{ get_phrase('Hashtag2') }}</option>
+                                        <option value="">{{ get_phrase('Hashtag3') }}</option>
+                                        <option value="">{{ get_phrase('Hashtag4') }}</option>
+                                    </select>
+                                </div>
 
                                 <div id="tab-file" class="post-inner file-tab cursor-pointer p-0 mt-2">
                                     <span class="close-btn z-index-2000"><i class="fa fa-close"></i></span>
 
                                     <!--Uploader start-->
-                                    <div class="file-uploader">
+                                    {{-- <div class="file-uploader">
                                         <label for="multiFileUploader">
                                             <i class="fa-solid fa-cloud-arrow-up text-secondary"></i>
                                             <p>{{get_phrase('Click to browse')}}</p>
@@ -92,12 +119,12 @@
                                         <div class="preview-files">
                                             <div class="row justify-content-start px-3"></div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <!--Uplodaer end-->
 
                                 </div>
 
-                                <div class="post-inner py-3" id="tab-tag">
+                                {{-- <div class="post-inner py-3" id="tab-tag">
                                     <h4 class="h5"> <a href="javascript:void(0)" onclick="$('#tab-tag').removeClass('current')" class="prev-btn"><i class="fa fa-long-arrow-left"></i></a>{{get_phrase('Tag People')}}
                                     </h4>
                                     <div class="tag-wrap">
@@ -119,15 +146,15 @@
                                         </div>
 
                                     </div><!-- Tag People End -->
-                                </div>
+                                </div> --}}
 
-                                @include('frontend.main_content.create_post_felling_and_activity')
+                                {{-- @include('frontend.main_content.create_post_felling_and_activity')
 
-                                @include('frontend.main_content.create_post_location')
+                                @include('frontend.main_content.create_post_location') --}}
                                 
                                 <!-- Location Tab End -->
                                 <div class="modal-footer text-center justify-content-center p-3">
-                                    <button type="button" data-tab="tab-file" class="btn btn-secondary"><img
+                                    {{-- <button type="button" data-tab="tab-file" class="btn btn-secondary"><img
                                             src="{{url('storage/images/image.svg')}}" alt="photo">{{get_phrase('Photo')}}/{{get_phrase('Video')}}</button>
 
                                     <button type="button" data-tab="tab-tag" class="btn btn-secondary"><img
@@ -137,12 +164,12 @@
                                     <button type="button" onclick="loadMaps('map')" data-tab="tab-location" class="btn btn-secondary"><img
                                             src="{{url('storage/images/location.png')}}" alt="photo">{{get_phrase('Location')}}</button>
                                     <button type="button" class="btn btn-secondary" onclick="confirmLiveStreaming()"><img src="{{url('storage/images/camera.svg')}}"
-                                            alt="photo">{{get_phrase('Live Video')}}</button>
+                                            alt="photo">{{get_phrase('Live Video')}}</button> --}}
                                     <button type="submit" class="btn btn-primary mt-3 rounded w-100 btn-lg">{{get_phrase('Publish')}}</button>
                                 </div>
                             </div>
 
-                    @endif
+                    {{-- @endif --}}
             </div>
           
            

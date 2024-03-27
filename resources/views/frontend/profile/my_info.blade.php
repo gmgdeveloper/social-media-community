@@ -21,4 +21,4 @@
         <span>{{get_phrase('Joined')}} <strong>{{date_formatter($user_info->created_at, 1)}}</strong></span>
     </li>
 </ul>
-<button onclick="showCustomModal('<?php echo route('profile.my_info', ['action_type' => 'edit']); ?>', '{{get_phrase('Edit info')}}')" class="btn btn-primary w-100 mt-3">{{get_phrase('Edit Info')}}</button>
+<button onclick="showCustomModal('<?php echo route('profile.my_info', ['action_type' => 'edit']); ?>', '{{get_phrase('Edit info')}}')" class="btn btn-primary w-100 mt-3" style="background:#fff;color:#000;border:1px solid black" >{{get_phrase('Edit Info')}}</button>

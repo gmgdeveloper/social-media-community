@@ -20,7 +20,7 @@
                 <div class="avatar-details">
                     <h3><?php echo e(auth()->user()->name); ?></h3>
                     <button onclick="showCustomModal('<?php echo e(route('load_modal_content', ['view_path' => 'frontend.profile.edit_profile'])); ?>', '<?php echo e(get_phrase('Edit your profile')); ?>');" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                        data-bs-target="#edit-profile"><i class="fa fa-pencil"></i><?php echo e(get_phrase('Edit Profile')); ?></button>
+                        data-bs-target="#edit-profile" style="background:#fff;color:#000" ><i class="fa fa-pencil"></i ><?php echo e(get_phrase('Edit Profile')); ?></button>
                 </div>
               
             </div>
@@ -35,6 +35,9 @@
                         <li class="nav-item <?php if(Route::currentRouteName() == 'profile.friends'): ?> active <?php endif; ?>"><a href="<?php echo e(route('profile.friends')); ?>" class="nav-link"><?php echo e(get_phrase('Friends')); ?></a></li>
                         <li class="nav-item <?php if(Route::currentRouteName() == 'profile.photos'): ?> active <?php endif; ?>"><a href="<?php echo e(route('profile.photos')); ?>" class="nav-link"><?php echo e(get_phrase('Photo')); ?></a></li>
                         <li class="nav-item <?php if(Route::currentRouteName() == 'profile.videos'): ?> active <?php endif; ?>"><a href="<?php echo e(route('profile.videos')); ?>" class="nav-link"><?php echo e(get_phrase('Video')); ?></a></li>
+                        
+                        <li class="nav-item <?php if(Route::currentRouteName() == 'profile.abouts'): ?> active <?php endif; ?>"><a href="#" class="nav-link"><?php echo e(get_phrase('About')); ?></a></li>
+                        <li class="nav-item <?php if(Route::currentRouteName() == 'profile.interest'): ?> active <?php endif; ?>"><a href="#" class="nav-link"><?php echo e(get_phrase('Interest')); ?></a></li>
                     </ul>
                 </nav>
 

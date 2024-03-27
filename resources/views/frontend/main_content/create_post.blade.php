@@ -40,6 +40,11 @@
     </div>
 </div>
 
+
+
+
+
+
 {{-- <style>
     .newsfeed-form {
     width: 100%;
@@ -51,6 +56,7 @@
 .entry {
     margin-bottom: 20px;
 }
+
 
 .entry-header {
     margin-bottom: 10px;

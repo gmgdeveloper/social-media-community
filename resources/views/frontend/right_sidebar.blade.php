@@ -46,10 +46,10 @@
     </div> <!-- Widget End -->
     <div class="widget">
         <div class="d-flex align-items-center justify-content-between">
-            <h3 class="widget-title">{{ get_phrase('Sponsored') }} </h3>
+            <h3 class="widget-title"> <a href="{{route('became.official')}}" >{{ get_phrase('Became Official') }}</a>  </h3>
             
         </div>
-        <div class="sponsors">
+        {{-- <div class="sponsors">
             @php
 
                 $sponsorPost = \App\Models\Sponsor::orderBy('id','desc')
@@ -82,7 +82,7 @@
                 </div>
             </a>
             @endforeach
-        </div>
+        </div> --}}
     </div> <!-- Widget End -->
     <div class="widget">
         <div class="d-flex align-items-center justify-content-between">

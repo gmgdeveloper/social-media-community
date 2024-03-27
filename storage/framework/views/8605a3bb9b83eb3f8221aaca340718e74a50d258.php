@@ -22,15 +22,12 @@
     </div>
 
     <div class="form-group pt-2">
-        <label for="#"><?php echo e(get_phrase('Community Title')); ?></label>
-        <input type="text" class="border-0 bg-secondary"  name="name" value="" required placeholder="Enter your page Name">
+        <label for="#"><?php echo e(get_phrase('Title')); ?></label>
+        <input type="text" class="border-0 bg-secondary"  name="name" value="" required placeholder="Enter Community Title">
     </div>
+    
     <div class="form-group">
-        <label for="#"><?php echo e(get_phrase('Community Sub Title')); ?></label>
-        <input type="text" class="border-0 bg-secondary" name="subtitle" value="" placeholder="Enter your page Name">
-    </div>
-    <div class="form-group">
-        <label for="#"><?php echo e(get_phrase('About')); ?></label>
+        <label for="#"><?php echo e(get_phrase('Description')); ?></label>
         <textarea name="about" class="border-0 bg-secondary content" id="about" cols="30" rows="10" placeholder="About Community"></textarea>
     </div>
     <div class="form-group">
@@ -40,9 +37,19 @@
             <option value="0"><?php echo e(get_phrase('Deactive')); ?></option>
         </select>
     </div>
+
+    <div class="form-group">
+        <label for="#"><?php echo e(get_phrase('Categories')); ?></label>
+        <select name="category" id="category" class="form-control border-0 bg-secondary">
+            <option value="1"><?php echo e(get_phrase('Category 1')); ?></option>
+            <option value="0"><?php echo e(get_phrase('Category 2')); ?></option>
+            <option value="0"><?php echo e(get_phrase('Category 3')); ?></option>
+            <option value="0"><?php echo e(get_phrase('Category 4')); ?></option>
+        </select>
+    </div>
     
     <div class="form-group">
-        <label for="#"><?php echo e(get_phrase('Update Profile Photo')); ?></label>
+        <label for="#"><?php echo e(get_phrase('Update Cover Photo')); ?></label>
         <input type="file" name="image" id="image" class="form-control border-0 bg-secondary">
     </div>
     <button type="submit" class="w-100 btn btn-primary"><?php echo e(get_phrase('Create Community')); ?></button>

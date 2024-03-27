@@ -35,8 +35,9 @@
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
                 </div>
-                <?php if(count($groups)>15): ?>
-                    <a href="<?php echo e(route('all.group.view')); ?>" class="btn btn-secondary btn-lg d-block mt-3"><?php echo e(get_phrase('See More')); ?></a>
+                <?php if(count($groups)>1): ?>
+                    
+                    <a href="#" class="btn btn-secondary btn-lg d-block mt-3"><?php echo e(get_phrase('See More')); ?></a>
                 <?php endif; ?>
             </div>
         </div>

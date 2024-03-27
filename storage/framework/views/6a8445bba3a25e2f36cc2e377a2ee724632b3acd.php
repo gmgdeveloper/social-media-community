@@ -18,7 +18,7 @@
             <?php echo script_checker($user_info->about) ?>
         </div>
         <?php if(isset($type)&&$type=="my_account"): ?>
-        <button onclick="toggleBio(this, '.edit-bio-form')" class="edit-bio-btn btn btn-primary w-100"><?php echo e(get_phrase('Edit Bio')); ?></button>
+        <button onclick="toggleBio(this, '.edit-bio-form')" class="edit-bio-btn btn btn-primary w-100" style="background:#fff;color:#000;border:1px solid black"><?php echo e(get_phrase('Edit Bio')); ?></button>
         <?php endif; ?>
 
         <form class="ajaxForm d-hidden edit-bio-form" action="<?php echo e(route('profile.about', ['action_type' => 'update'])); ?>" method="post">

@@ -28,6 +28,15 @@
     <link rel="stylesheet" href="{{ url('assets/frontend/css/style.css') }}">
     <link rel="stylesheet" href="{{ url('assets/frontend/css/own.css') }}">
 
+    <style>
+        .login-btns a {
+    background: #ffffff !important;
+    padding: 10px 32px;
+    color: #171616 !important;
+    border: 1px solid #ffffff !important;
+    font-size: 18px;
+}
+    </style>
    
 </head>
 
@@ -37,7 +46,7 @@
 @php $system_light_logo = \App\Models\Setting::where('type', 'system_light_logo')->value('description'); @endphp
 
 <!-- header -->
-    <header class=" header-default py-3" style="background-color: blueviolet;">
+    <header class=" header-default py-3" style="background-color: #a75af1;">
     <nav class="navigation">
         <div class="container">
             <div class="row">
@@ -62,7 +71,7 @@
                         @if(get_settings('public_signup') == 1)
                             <a href="{{ route('register') }}" class="btn @if(Route::currentRouteName() == 'register') active @endif">{{ __('Sign up')  }}</a>
                         @endif
-                        <a href="{{ route('guest_user') }}" class="btn @if(Route::currentRouteName() == 'guest_user') active @endif" style="margin-left:0px" >{{  __('Guest') }}</a>
+                        {{-- <a href="{{ route('guest_user') }}" class="btn @if(Route::currentRouteName() == 'guest_user') active @endif" style="margin-left:0px" >{{  __('Guest') }}</a> --}}
                     </div>
                 </div>
             </div>
