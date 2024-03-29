@@ -12,7 +12,7 @@
 
 <aside class="sidebar plain-sidebar">
     <div class="widget intro-widget">
-        <h4>{{get_phrase('Intro')}}</h4>
+        <h4>{{get_phrase('About')}}</h4>
 
         <div class="my-about mb-3 text-center">
             @php echo script_checker($user_info->about) @endphp

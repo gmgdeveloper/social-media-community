@@ -30,12 +30,15 @@
 
     <style>
         .login-btns a {
-    background: #ffffff !important;
-    padding: 10px 32px;
-    color: #171616 !important;
-    border: 1px solid #ffffff !important;
-    font-size: 18px;
-}
+        background: #ffffff !important;
+        padding: 10px 32px;
+        color: #171616 !important;
+        border: 1px solid #ffffff !important;
+        font-size: 18px;
+    }
+    .login-btns a:hover {
+        background: #a75af1;
+    }
     </style>
    
 </head>
@@ -53,7 +56,9 @@
                 <div class="col-auto col-lg-6">
                     <div class="logo-branding mt-1">
                         <a class="navbar-brand d-xs-hidden">
-                            <img src="<?php echo e(url('storage/logo/light/'.$system_light_logo,)); ?>" height="50px" class="max-width-250px d-xs-hidden" alt="logo" />
+                            <img src="<?php echo e(url('storage/logo/light/'.$system_light_logo,)); ?>" class="max-width-250px d-xs-hidden" alt="logo" style="
+                            width: 125px;
+                        " />
                         </a>
 
                         <a class="navbar-brand d-block" >

@@ -204,7 +204,7 @@ class Profile extends Controller
 
     function videos()
     {
-
+        
         $all_videos = Media_files::where('user_id', $this->user->id)
             ->where('file_type', 'video')
             ->take(24)->orderBy('id', 'DESC')->get();
@@ -496,7 +496,8 @@ class Profile extends Controller
 
     public function interest()
     {
-        dd('hello');
+        $page_data['view_path'] = 'frontend.profile.index';
+        return view('frontend.index', $page_data);
     }
 
 

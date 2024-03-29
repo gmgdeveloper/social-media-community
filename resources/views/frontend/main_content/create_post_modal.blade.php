@@ -88,12 +88,12 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="#">{{ get_phrase('Image') }}</label>
-                                    <input type="file" name="image" id="image" class="form-control border-0 ">
+                                    <input type="file" name="image" id="image" class="form-control border-0 dropify">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="#">{{ get_phrase('Video') }}</label>
-                                    <input type="file" name="video" id="video" class="form-control border-0">
+                                    <input type="file" name="video" id="video" class="form-control border-0 dropify">
                                 </div>
 
                                 <div class="form-group">
@@ -124,7 +124,7 @@
 
                                 </div>
 
-                                {{-- <div class="post-inner py-3" id="tab-tag">
+                                <div class="post-inner py-3" id="tab-tag">
                                     <h4 class="h5"> <a href="javascript:void(0)" onclick="$('#tab-tag').removeClass('current')" class="prev-btn"><i class="fa fa-long-arrow-left"></i></a>{{get_phrase('Tag People')}}
                                     </h4>
                                     <div class="tag-wrap">
@@ -146,7 +146,7 @@
                                         </div>
 
                                     </div><!-- Tag People End -->
-                                </div> --}}
+                                </div>
 
                                 {{-- @include('frontend.main_content.create_post_felling_and_activity')
 
@@ -176,3 +176,13 @@
         </div>
     </div> <!-- Create Post Modal End -->
 </form>
+
+<script>
+    $(document).ready(function() {
+
+$('.dropify').dropify();
+
+
+
+});
+</script>

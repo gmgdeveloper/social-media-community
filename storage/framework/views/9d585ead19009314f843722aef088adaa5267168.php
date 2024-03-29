@@ -12,9 +12,31 @@
                     <img src="<?php echo e(url($page->logo, 'logo')); ?>" width="40px" height="40px" class="rounded-circle" alt="">
                 </a>
             <?php else: ?>
+            <div class="zodiac_sign_with_profile" >
+
+                <img src="<?php echo e(url('storage/userzodiac/aries.png')); ?>" width="20" alt="" style="
+                display: block;
+                margin-top: 15px;
+                margin-left: -3px;
+                width: 18px;
+            ">
+            </div>
                 <a href="<?php echo e(route('profile')); ?>" class="author-thumb d-flex align-items-center">
                     <img src="<?php echo e(get_user_image($user_info->photo, 'optimized')); ?>" width="40px" height="40px" class="rounded-circle" alt="">
                 </a>
+                <div class="genderandinterest_timeline">
+
+                    
+                    <img src="<?php echo e(url('storage/thumbnails/gendersign.png')); ?>" width="50" alt="" style="
+                   
+                    position: absolute;
+                    width: 22px;
+                    left: 29px;
+                    top: 51px;
+                    border-radius: 40px;
+                ">
+
+                </div>
             <?php endif; ?>
             <button class="btn-trans" data-bs-toggle="modal" data-bs-target="#createPost">
                 <?php echo e(get_phrase("What's on your mind ____", [auth()->user()->name])); ?>?

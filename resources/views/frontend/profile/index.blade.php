@@ -5,7 +5,7 @@
             <div class="profile-avatar d-flex align-items-center ps-4">
                 <div class="zodiac_sign_with_profile">
 
-                    <img src="{{url('storage/zodiac/leo.png')}}" width="20" alt="">
+                    <img src="{{url('storage/userzodiac/aries.png')}}" width="20" alt="">
                 </div>
                 <div class="avatar avatar-xl"><img class="rounded-circle" src="{{get_user_image($user_info->photo, 'optimized')}}" alt=""> </div>
                 <div class="genderandinterest">
@@ -35,10 +35,10 @@
                         <li class="nav-item @if(Route::currentRouteName() == 'profile.friends') active @endif"><a href="{{route('profile.friends')}}" class="nav-link">{{get_phrase('Friends')}}</a></li>
                         <li class="nav-item @if(Route::currentRouteName() == 'profile.photos') active @endif"><a href="{{route('profile.photos')}}" class="nav-link">{{get_phrase('Photo')}}</a></li>
                         <li class="nav-item @if(Route::currentRouteName() == 'profile.videos') active @endif"><a href="{{route('profile.videos')}}" class="nav-link">{{get_phrase('Video')}}</a></li>
-                        {{-- <li class="nav-item @if(Route::currentRouteName() == 'profile.abouts') active @endif"><a href="{{route('profile.abouts')}}" class="nav-link">{{get_phrase('About')}}</a></li>
-                        <li class="nav-item @if(Route::currentRouteName() == 'profile.interest') active @endif"><a href="{{route('profile.interest')}}" class="nav-link">{{get_phrase('Interest')}}</a></li> --}}
-                        <li class="nav-item @if(Route::currentRouteName() == 'profile.abouts') active @endif"><a href="#" class="nav-link">{{get_phrase('About')}}</a></li>
-                        <li class="nav-item @if(Route::currentRouteName() == 'profile.interest') active @endif"><a href="#" class="nav-link">{{get_phrase('Interest')}}</a></li>
+                        {{-- <li class="nav-item @if(Route::currentRouteName() == 'profile.abouts') active @endif"><a href="{{route('profile.abouts')}}" class="nav-link">{{get_phrase('About')}}</a></li> --}}
+                        <li class="nav-item @if(Route::currentRouteName() == 'profile.interest') active @endif"><a href="{{route('profile.interest')}}" class="nav-link">{{get_phrase('Interest')}}</a></li>
+                        {{-- <li class="nav-item @if(Route::currentRouteName() == 'profile.abouts') active @endif"><a href="#" class="nav-link">{{get_phrase('About')}}</a></li> --}}
+                        {{-- <li class="nav-item @if(Route::currentRouteName() == 'profile.interest') active @endif"><a href="#" class="nav-link">{{get_phrase('Interest')}}</a></li> --}}
                     </ul>
                 </nav>
 
@@ -48,6 +48,8 @@
                     @include('frontend.profile.photos')
                 @elseif(Route::currentRouteName() == 'profile.videos')
                     @include('frontend.profile.videos')
+                @elseif(Route::currentRouteName() == 'profile.interest')
+                    @include('frontend.profile.interest')
                 @else
                     {{-- @include('frontend.main_content.create_post') --}}
 

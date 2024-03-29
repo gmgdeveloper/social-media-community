@@ -44,11 +44,20 @@
     
     <script src="{{url('assets/frontend/js/jquery-3.6.0.min.js')}}"></script>
     <link href="{{url('css/timeline.css')}}" rel="stylesheet">
+    <link href="{{url('assets/plugins/dropify/css/dropify.min.css')}}" rel="stylesheet">
 
-    
+    <link rel="stylesheet" href="{{ url('assets/plugins/select2/css/select2.min.css')}}">
+
+
    
-<style>
 
+<!-- JavaScript -->
+
+<style>
+.dropify-wrapper .dropify-message p {
+    margin: 5px 0 0;
+    font-size: 15px;
+}
 </style>
 
 </head>
@@ -119,6 +128,9 @@
 
     <script src="{{url('assets/frontend/js/initialize.js')}}"></script>
    
+    <script src="{{ url('assets/plugins/dropify/js/dropify.min.js')}}"></script>
+    <script src="{{ url('assets/plugins/select2/js/select2.full.min.js') }}"></script>
+   
 
 
     <script>
@@ -157,6 +169,13 @@
 //         }
 //     }
 // })
+
+
+    $(document).ready(function() {
+        $('#hashtags').select2();
+    });
+
+
 
     </script>
 

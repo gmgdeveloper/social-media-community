@@ -52,20 +52,40 @@
     </div>
     <div class="form-group">
         <label for="#">{{ get_phrase('Hashtags') }}</label>
-        <select name="hashtags" id="hashtags" class="form-control">
+        <select name="hashtags" id="hashtags" class="form-control select2-taggable">
             <option value=""> {{ get_phrase('Hashtag1') }}</option>
             <option value=""> {{ get_phrase('Hashtag2') }}</option>
             <option value=""> {{ get_phrase('Hashtag3') }}</option>
             <option value=""> {{ get_phrase('Hashtag4') }}</option>
         </select>
     </div>
+
+    <select class="js-example-basic-multiple form-control" name="states[]" multiple="multiple">
+        <option value="AL">Alabama</option>
+          ...
+        <option value="WY">Wyoming</option>
+      </select>
     
     <div class="form-group">
         <label for="#">{{ get_phrase('Update Cover Photo') }}</label>
-        <input type="file" name="image" id="image" class="form-control border-0 bg-secondary">
+        <input type="file" name="image" id="image" class="form-control border-0 bg-secondary dropify">
     </div>
     <button type="submit" class="w-100 btn btn-primary">{{ get_phrase('Create Community') }}</button>
 </form>
 
+<script>
+        $(document).ready(function() {
+
+$('.dropify').dropify();
+
+
+$('.select2-taggable').select2({
+            theme: 'bootstrap4',
+            tags: true
+        })
+});
+</script>
 
 @include('frontend.initialize')
+
+

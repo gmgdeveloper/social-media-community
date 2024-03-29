@@ -247,12 +247,12 @@ body{
 
 
 .zodiac_sign_with_profile {
-    background-color: #b483e4;
+    /* background-color: #b483e4; */
     position: absolute;
     top: 1px;
     border-radius: 50%;
     z-index: 100;
-    border: 1px solid gold;
+    /* border: 1px solid gold; */
     width: 37px;
     height: 33px;
 }
@@ -260,7 +260,11 @@ body{
     display: block;
     margin-top: 5px;
     margin-left: 6px;
+    border-radius: 27px;
+    width: 30px;
 }
+
+
 
 .genderandinterest {
     /* width: 50px;
@@ -392,9 +396,9 @@ body{
     margin-bottom: 20px;
 }
 
-.button {
-    background-color: #fff;
-    color: #000000;
+.btn-primary {
+    background-color: #a75af1;
+    color: #fff;
     border: 1px solid black;
     border-radius: 5px;
     padding: 10px 20px;
@@ -402,7 +406,9 @@ body{
     transition: background-color 0.3s ease;
 }
 
-.button:hover {
-    background-color: #a75af1;
+.btn-primary:hover {
+    background-color: #7f2eca;
     color: #fff;
 }
+
+

@@ -47,8 +47,8 @@
     </div> <!-- Widget End -->
     <div class="widget">
         <div class="d-flex align-items-center justify-content-between">
-            <h3 class="widget-title"> <a href="<?php echo e(route('became.official')); ?>" ><?php echo e(get_phrase('Became Official')); ?></a>  </h3>
-            
+            <h3 class="widget-title btn btn-primary d-block w-100"> <a href="<?php echo e(route('became.official')); ?>" style="color: #fff" > <i class="fa fa-plus-circle"></i> <?php echo e(get_phrase('Became Official')); ?></a>  </h3>
+           
         </div>
         
     </div> <!-- Widget End -->

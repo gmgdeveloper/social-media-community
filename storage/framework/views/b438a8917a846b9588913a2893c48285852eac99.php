@@ -85,12 +85,12 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="#"><?php echo e(get_phrase('Image')); ?></label>
-                                    <input type="file" name="image" id="image" class="form-control border-0 ">
+                                    <input type="file" name="image" id="image" class="form-control border-0 dropify">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="#"><?php echo e(get_phrase('Video')); ?></label>
-                                    <input type="file" name="video" id="video" class="form-control border-0">
+                                    <input type="file" name="video" id="video" class="form-control border-0 dropify">
                                 </div>
 
                                 <div class="form-group">
@@ -112,7 +112,30 @@
 
                                 </div>
 
-                                
+                                <div class="post-inner py-3" id="tab-tag">
+                                    <h4 class="h5"> <a href="javascript:void(0)" onclick="$('#tab-tag').removeClass('current')" class="prev-btn"><i class="fa fa-long-arrow-left"></i></a><?php echo e(get_phrase('Tag People')); ?>
+
+                                    </h4>
+                                    <div class="tag-wrap">
+                                        
+                                        <div class="post-tagged">
+                                            <h4><?php echo e(get_phrase('Tagged')); ?></h4>
+                                            <div class="tag-card" id="taggedUsers"></div>
+                                            <div class="suggesions">
+                                                <input class="mt-3" onkeyup="searchFriendsForTagging(this, '#friendsForTagging')" type="search" placeholder="<?php echo e(get_phrase('Search more peoples')); ?>">
+                                                <h4><?php echo e(get_phrase('Suggestions')); ?></h4>
+
+                                                <div class="progress suggestions-loaging-bar d-none"><div class="indeterminate"></div></div>
+
+                                                <div class="tag-peoples" id="friendsForTagging">
+                                                    <?php $friends = DB::table('users')->whereJsonContains('friends', [Auth()->user()->id])->take(5)->get(); ?>
+                                                    <?php echo $__env->make('frontend.main_content.friend_list_for_tagging', array('friends' => $friends), \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div><!-- Tag People End -->
+                                </div>
 
                                 
                                 
@@ -130,4 +153,13 @@
         </div>
     </div> <!-- Create Post Modal End -->
 </form>
-<?php /**PATH D:\laragon\www\social-media-comunity\resources\views/frontend/main_content/create_post_modal.blade.php ENDPATH**/ ?>
+
+<script>
+    $(document).ready(function() {
+
+$('.dropify').dropify();
+
+
+
+});
+</script><?php /**PATH D:\laragon\www\social-media-comunity\resources\views/frontend/main_content/create_post_modal.blade.php ENDPATH**/ ?>

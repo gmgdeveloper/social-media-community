@@ -902,12 +902,21 @@ select.form-control {
     background-position: center;
     border-radius: 10px;
 }
-.thumbnail-103-103{
-    height: 103px;
-    width: 100%;
+.thumbnail-103-103 {
+    height: 34px;
+    width: 25%;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
+    border-radius: 50%;
+}
+.community_info  p{
+    margin-bottom: 1px;
+    margin-left: 19px;
+}
+.community_info  h6{
+    margin-top: -44px;
+    margin-left: 21px;
 }
 .thumbnail-196-196{
     height: 196px;
@@ -987,7 +996,7 @@ select.form-control {
 }
 
 
-.login-btns a{
+/* .login-btns a{
     background: #5b2ff9 !important;
     padding: 10px 32px;
     color: #fff !important;
@@ -1000,7 +1009,7 @@ select.form-control {
     color: #fff !important;
     border: 1px solid #ff7856 !important;
     font-size: 18px;
-}
+} */
 
 
 .thumbnail-210-200{

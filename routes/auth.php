@@ -43,6 +43,8 @@ Route::get('/login/google/callback', [RegisteredUserController::class, 'handleGo
 
 // });
 
+
+
 Route::middleware('auth')->group(function () {
     Route::get('verify-email', [EmailVerificationPromptController::class, '__invoke'])
                 ->name('verification.notice');
